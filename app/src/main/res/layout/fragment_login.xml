@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentLogin">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtUsernameLogin"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/loginicon"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="Kullanıcı Adı"
+            android:includeFontPadding="false"
+            android:inputType="textVisiblePassword|textPassword"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/txtPasswordLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.805" />
+
+        <EditText
+            android:id="@+id/txtPasswordLogin"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="36dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/pwicon"
+            android:ems="10"
+
+            android:fontFamily="sans-serif-light"
+            android:hint="Şifre"
+            android:inputType="textVisiblePassword|textPassword"
+            android:paddingHorizontal="5dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegisterR"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="245dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="64dp"
+            android:background="@drawable/smooth_corner_button"
+
+            android:fontFamily="sans-serif-light"
+            android:text="GİRİŞ"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.463"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+</FrameLayout>
