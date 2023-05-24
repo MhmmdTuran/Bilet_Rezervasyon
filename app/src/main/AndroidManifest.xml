@@ -12,6 +12,15 @@
         android:theme="@style/Theme.Rezervasyon"
         tools:targetApi="31">
         <activity
+            android:name=".UserInformations"
+            android:exported="false" />
+        <activity
+            android:name=".HotelReservation"
+            android:exported="false" />
+        <activity
+            android:name=".BusReservation"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity

@@ -11,7 +11,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnHotel"
-        android:layout_width="138dp"
+        android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="208dp"
@@ -25,7 +25,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnCikis"
-        android:layout_width="137dp"
+        android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="30dp"
@@ -40,7 +40,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnBus"
-        android:layout_width="141dp"
+        android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginStart="70dp"
         android:layout_marginTop="208dp"
@@ -51,7 +51,7 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnUserInfo"
-        android:layout_width="138dp"
+        android:layout_width="130dp"
         android:layout_height="130dp"
         android:layout_marginStart="68dp"
         android:layout_marginTop="30dp"
@@ -65,6 +65,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Otobüs Rezerasyon"
+        android:textColor="#727170"
         app:layout_constraintEnd_toEndOf="@+id/btnBus"
         app:layout_constraintStart_toStartOf="@+id/btnBus"
         app:layout_constraintTop_toBottomOf="@+id/btnBus" />
@@ -74,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Otel Rezervasyon"
+        android:textColor="#727170"
         app:layout_constraintEnd_toEndOf="@+id/btnHotel"
         app:layout_constraintStart_toStartOf="@+id/btnHotel"
         app:layout_constraintTop_toBottomOf="@+id/btnHotel" />
@@ -83,6 +85,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kullanıcı Bilgileri"
+        android:textColor="#727170"
         app:layout_constraintEnd_toEndOf="@+id/btnUserInfo"
         app:layout_constraintStart_toStartOf="@+id/btnUserInfo"
         app:layout_constraintTop_toBottomOf="@+id/btnUserInfo" />
@@ -92,6 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Çıkış Yap"
+        android:textColor="#727170"
         app:layout_constraintEnd_toEndOf="@+id/btnCikis"
         app:layout_constraintStart_toStartOf="@+id/btnCikis"
         app:layout_constraintTop_toBottomOf="@+id/btnCikis" />
