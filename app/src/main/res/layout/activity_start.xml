@@ -33,9 +33,8 @@
 
         <Button
             android:id="@+id/btnLoginChoose"
-            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="0.3"
             android:background="@drawable/corner_left_button"
             android:text="GİRİŞ"
@@ -44,9 +43,8 @@
 
         <Button
             android:id="@+id/btnRegisterChoose"
-            style="@style/Widget.AppCompat.Button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:layout_weight="0.3"
             android:background="@drawable/corner_right_button"
             android:text="KAYIT"

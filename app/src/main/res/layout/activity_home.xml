@@ -1,48 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home_background"
     android:orientation="vertical"
     android:weightSum="1"
     tools:context=".Home">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="0.1"
-        android:orientation="vertical"
-        android:background="@color/red"></LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnHotel"
+        android:layout_width="138dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="208dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/btn_hotel_icons"
+        android:contentDescription="Otel Rezervasyonu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btnBus"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="0.7"
-        android:background="@color/white"></LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCikis"
+        android:layout_width="137dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="60dp"
+        android:background="@drawable/btn_logout_icons"
+        android:contentDescription="Çıkış Yap"
+        android:textColor="@color/design_default_color_on_secondary"
+        app:iconTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnUserInfo"
+        app:layout_constraintTop_toBottomOf="@+id/btnHotel" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:layout_weight="0.2"
-        android:background="@color/black">
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBus"
+        android:layout_width="141dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="208dp"
+        android:background="@drawable/btn_bus_icons"
+        android:contentDescription="Otobüs Rezervasyonu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnCikis"
-            android:layout_width="129dp"
-            android:layout_height="69dp"
-            android:layout_marginStart="139dp"
-            android:layout_marginTop="400dp"
-            android:layout_marginEnd="144dp"
-            android:layout_marginBottom="242dp"
-            android:text="GİRİŞ EKRANA DÖN"
-            android:textColor="@color/design_default_color_on_secondary"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUserInfo"
+        android:layout_width="138dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_user_icons"
+        android:contentDescription="Kullanıcı Bilgileri"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBus" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/txtBus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otobüs Rezerasyon"
+        app:layout_constraintEnd_toEndOf="@+id/btnBus"
+        app:layout_constraintStart_toStartOf="@+id/btnBus"
+        app:layout_constraintTop_toBottomOf="@+id/btnBus" />
+
+    <TextView
+        android:id="@+id/txtHotel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otel Rezervasyon"
+        app:layout_constraintEnd_toEndOf="@+id/btnHotel"
+        app:layout_constraintStart_toStartOf="@+id/btnHotel"
+        app:layout_constraintTop_toBottomOf="@+id/btnHotel" />
+
+    <TextView
+        android:id="@+id/txtUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kullanıcı Bilgileri"
+        app:layout_constraintEnd_toEndOf="@+id/btnUserInfo"
+        app:layout_constraintStart_toStartOf="@+id/btnUserInfo"
+        app:layout_constraintTop_toBottomOf="@+id/btnUserInfo" />
+
+    <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Çıkış Yap"
+        app:layout_constraintEnd_toEndOf="@+id/btnCikis"
+        app:layout_constraintStart_toStartOf="@+id/btnCikis"
+        app:layout_constraintTop_toBottomOf="@+id/btnCikis" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

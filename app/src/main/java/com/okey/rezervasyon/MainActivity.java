@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,11 +21,9 @@ public class MainActivity extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
-
-
-
-
         Button btnLoginChs = findViewById(R.id.btnLoginChoose);
+
+
         btnLoginChs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,14 +32,18 @@ public class MainActivity extends AppCompatActivity {
                         .replace(R.id.fragmentContainerLoginForm, FragmentLogin.class,null)
                         .setReorderingAllowed(true)
                         .commit();
+
             }
         });
 
 
-
-
         Button btnRegisterChs = findViewById(R.id.btnRegisterChoose);
+
+
         btnRegisterChs.setOnClickListener(new View.OnClickListener() {
+
+
+
             @Override
             public void onClick(View view) {
 
@@ -48,8 +52,14 @@ public class MainActivity extends AppCompatActivity {
                         .setReorderingAllowed(true)
                         .commit();
 
+
+
             }
         }
+
+
+
+
         );
 
 
