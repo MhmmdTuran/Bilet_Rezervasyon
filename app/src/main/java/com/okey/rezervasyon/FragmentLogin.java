@@ -54,6 +54,7 @@ public class FragmentLogin extends Fragment {
                     if(checkuserpas){
                         Toast.makeText( getContext(),"Giriş Başarılı",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(getContext(), Home.class);
+                        intent.putExtra("username", user);
                         startActivity(intent);
                     }
                     else {

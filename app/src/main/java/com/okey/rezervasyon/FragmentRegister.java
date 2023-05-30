@@ -54,10 +54,11 @@ public class FragmentRegister extends Fragment {
                 else{
                     Boolean checkUser = DB.checkUsername(user);
                     if(checkUser==false) {
-                        Boolean insert = DB.insertData(user,pass,mail);
+                        Boolean insert = DB.insertUserData(user,pass,mail);
                         if(insert){
                             Toast.makeText(getContext(),"Kayıt Başarılı",Toast.LENGTH_SHORT).show();
                             Intent intent = new Intent(getContext(), Home.class);
+                            intent.putExtra("username", user);
                             startActivity(intent);
                         }
                         else {

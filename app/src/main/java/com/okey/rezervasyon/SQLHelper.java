@@ -5,8 +5,11 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.provider.ContactsContract;
 
 import androidx.annotation.Nullable;
+
+import java.util.Date;
 
 public class SQLHelper extends SQLiteOpenHelper {
 
@@ -20,17 +23,31 @@ public class SQLHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create Table userLoginInfo(username TEXT primary key,password TEXT," +
                 "email TEXT)");
+        sqLiteDatabase.execSQL("create Table busReservations(username TEXT primary key,fromWhere TEXT," +
+                "toWhere TEXT,resDate date)");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("drop Table if exists userLoginInfo");
-
+        sqLiteDatabase.execSQL("drop Table if exists busReservations");
         onCreate(sqLiteDatabase);
-
     }
 
-    public Boolean insertData(String username,String password,String email){
+    public Boolean insertResData(String username, String fromWhere, String toWhere, String resDate){
+        SQLiteDatabase myDB =getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("username",username);
+        contentValues.put("fromWhere",fromWhere);
+        contentValues.put("toWhere",toWhere);
+        contentValues.put("resDate",resDate);
+        long result = myDB.insert("busReservations",null,contentValues);
+        if(result==-1) return false;
+        else
+            return true;
+    }
+
+    public Boolean insertUserData(String username, String password, String email){
         SQLiteDatabase MyDB = getWritableDatabase();
         ContentValues contentValues= new ContentValues();
         contentValues.put("username",username);

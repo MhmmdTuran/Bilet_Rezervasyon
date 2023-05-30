@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Home extends AppCompatActivity {
+    String username;
     Button cikis;
     Button bus;
     Button hotel;
@@ -17,6 +18,8 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Intent intent = getIntent();
+        username = intent.getStringExtra("username");
 
         cikis = findViewById(R.id.btnCikis);
 
@@ -24,6 +27,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });
@@ -34,6 +38,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),BusReservation.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
 
             }
@@ -45,6 +50,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),HotelReservation.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
@@ -56,6 +62,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(),UserInformations.class);
+                intent.putExtra("username",username);
                 startActivity(intent);
             }
         });
