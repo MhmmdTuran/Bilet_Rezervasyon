@@ -23,7 +23,7 @@ public class SQLHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL("create Table userLoginInfo(username TEXT primary key,password TEXT," +
                 "email TEXT)");
-        sqLiteDatabase.execSQL("create Table busReservations(username TEXT primary key,fromWhere TEXT," +
+        sqLiteDatabase.execSQL("create Table busReservations(username TEXT,fromWhere TEXT," +
                 "toWhere TEXT,resDate date)");
     }
 
